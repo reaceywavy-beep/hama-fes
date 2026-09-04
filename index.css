@@ -1,0 +1,155 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-cinzel: 'Cinzel', serif;
+    --font-montserrat: 'Montserrat', sans-serif;
+    --font-jp: 'Noto Sans JP', sans-serif;
+  }
+  body {
+    font-family: var(--font-jp), system-ui, -apple-system, sans-serif;
+    background-color: #050505;
+    color: #ffffff;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* High Density Theme Styles */
+.gold-gradient {
+  background: linear-gradient(135deg, #C5A059 0%, #F1D38A 50%, #B38B45 100%);
+}
+
+.casino-card {
+  background: linear-gradient(180deg, #1A1A1A 0%, #0D0D0D 100%);
+  border: 1px solid #333;
+  position: relative;
+}
+
+.neon-red-text {
+  color: #FF2D55;
+  text-shadow: 0 0 8px rgba(255, 45, 85, 0.6);
+}
+
+.gold-glow {
+  box-shadow: 0 0 20px rgba(197, 160, 89, 0.3);
+  border: 1px solid #C5A059;
+}
+
+.suit-bg {
+  position: absolute;
+  font-size: 120px;
+  opacity: 0.03;
+  font-family: serif;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.font-cinzel {
+  font-family: 'Cinzel', serif;
+}
+
+.font-num {
+  font-family: 'Montserrat', monospace;
+  font-feature-settings: "tnum";
+  font-variant-numeric: tabular-nums;
+}
+
+/* Luxury Casino Accents */
+.gold-gradient-text {
+  background: linear-gradient(135deg, #F1D38A 0%, #C5A059 50%, #B38B45 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.silver-gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 40%, #94a3b8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bronze-gradient-text {
+  background: linear-gradient(135deg, #fed7aa 0%, #f97316 50%, #c2410c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-box-border {
+  border: 1px solid rgba(197, 160, 89, 0.6);
+  box-shadow: 0 0 15px rgba(197, 160, 89, 0.25), inset 0 0 15px rgba(197, 160, 89, 0.08);
+}
+
+.neon-red-glow {
+  box-shadow: 0 0 20px rgba(255, 45, 85, 0.45);
+}
+
+.casino-1st-bg {
+  background: radial-gradient(circle at 50% 0%, rgba(197, 160, 89, 0.22) 0%, rgba(30, 24, 14, 0.9) 60%, #0A0A0A 100%);
+}
+
+.casino-2nd-bg {
+  background: linear-gradient(180deg, #1A1A1A 0%, #0D0D0D 100%);
+}
+
+.casino-3rd-bg {
+  background: linear-gradient(180deg, #1A1A1A 0%, #0D0D0D 100%);
+}
+
+/* Rank Emblem Animations */
+@keyframes emblem-silver-shimmer {
+  0%, 100% { opacity: 0.15; transform: translateX(-100%) rotate(25deg); }
+  50% { opacity: 0.55; transform: translateX(100%) rotate(25deg); }
+}
+
+@keyframes emblem-gold-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes emblem-platinum-pulse {
+  0%, 100% { opacity: 0.7; filter: drop-shadow(0 0 2px rgba(103, 232, 249, 0.4)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 6px rgba(103, 232, 249, 0.8)); }
+}
+
+@keyframes emblem-diamond-glint {
+  0%, 75%, 100% { opacity: 0; transform: scale(0.3) rotate(0deg); }
+  85% { opacity: 1; transform: scale(1.15) rotate(45deg); filter: drop-shadow(0 0 8px #ffffff); }
+  92% { opacity: 0.3; transform: scale(0.7) rotate(90deg); }
+}
+
+@keyframes emblem-black-neon {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px rgba(255, 45, 85, 0.45)) drop-shadow(0 0 10px rgba(197, 160, 89, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 9px rgba(255, 45, 85, 0.75)) drop-shadow(0 0 14px rgba(255, 215, 0, 0.35));
+  }
+}
+
+@keyframes king-crown-float {
+  0%, 100% { transform: translateY(0px); filter: drop-shadow(0 0 8px rgba(255, 215, 0, 0.6)); }
+  50% { transform: translateY(-2px); filter: drop-shadow(0 0 14px rgba(255, 215, 0, 0.9)); }
+}
+
+.anim-silver-shimmer {
+  animation: emblem-silver-shimmer 6s ease-in-out infinite;
+}
+
+.anim-gold-sweep {
+  animation: emblem-gold-sweep 14s linear infinite;
+}
+
+.anim-platinum-pulse {
+  animation: emblem-platinum-pulse 3.5s ease-in-out infinite;
+}
+
+.anim-diamond-glint {
+  animation: emblem-diamond-glint 4s ease-in-out infinite;
+}
+
+.anim-black-neon {
+  animation: emblem-black-neon 4s ease-in-out infinite;
+}
+
+.anim-king-crown {
+  animation: king-crown-float 3s ease-in-out infinite;
+}

@@ -1,0 +1,7 @@
+{
+  "name": "HAMA FES",
+  "description": "HAMA FES - ラスベガス高級カジノ型 Webランキングシステム",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
